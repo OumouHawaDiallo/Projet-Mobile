@@ -7,7 +7,7 @@ function ajouterTache() {
         const newTaskItem = document.createElement('li');
         newTaskItem.innerHTML = taskInput.value;
 
-        // Gestionnaire d'événement pour le balayage vers la droite
+
         $(newTaskItem).on('swiperight', function () {
             $(this).toggleClass('terminer');
             if ($(this).hasClass('terminer')) {
@@ -19,7 +19,7 @@ function ajouterTache() {
             $(taskListDone).listview('refresh');
         });
 
-        // Gestionnaire d'événement pour le balayage vers la gauche
+
         $(newTaskItem).on('swipeleft', function () {
             $(this).hide('slow', function () {
                 $(this).remove();
